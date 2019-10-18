@@ -3,7 +3,8 @@
  */
 
 export function linearUnsorted(arr: number[], value: number): number {
-    let bestindex = 0;
+    let bestindex = -1;
+    let bestvalue = 0;
     /* Convert the pseudocode into typescript */
     /*
         loop I from 1 to the last element of the array
@@ -16,6 +17,14 @@ export function linearUnsorted(arr: number[], value: number): number {
             end if
         end loop
     */
+    for (let i=0; i < arr.length; i++) {
+            if (arr[i] <= value) {
+                if (bestindex == -1 || arr[i] > bestvalue) {
+                    bestindex = i;
+                    bestvalue = arr[i];
+                }
+            }
+    }
     return bestindex;
 }
 

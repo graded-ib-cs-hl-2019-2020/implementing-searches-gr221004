@@ -22,7 +22,7 @@ if (arr1[linearSorted(arr1, 2)] != 2) {
     failed = true;
     console.log("linearSorted failed on arr1 searching for 2");
 }
-if (arr1[linearSorted(arr1, 0)] != 2) {
+if (linearSorted(arr1, 0) != -1) {
     failed = true;
     console.log("linearSorted failed on arr1 searching for 0");
 }
@@ -34,9 +34,10 @@ if (arr1[linearUnsorted(arr1, 2)] != 2) {
     failed = true;
     console.log("linearUnsorted failed on arr1 searching for 2");
 }
-if (arr1[linearUnsorted(arr1, 0)] != 2) {
+if (linearUnsorted(arr1, 0) != -1) {
     failed = true;
     console.log("linearUnsorted failed on arr1 searching for 0");
+    console.log(linearUnsorted(arr1,0));
 }
 
 if (arr1[binary(arr1, 9)] != 8) {
@@ -47,7 +48,7 @@ if (arr1[binary(arr1, 2)] != 2) {
     failed = true;
     console.log("binary failed on arr1 searching for 2");
 }
-if (arr1[binary(arr1, 0)] != 2) {
+if (binary(arr1, 0) != -1) {
     failed = true;
     console.log("binary failed on arr1 searching for 0");
 }
